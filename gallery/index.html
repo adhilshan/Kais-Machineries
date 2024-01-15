@@ -1,0 +1,367 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kais - Machineries</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description"
+        content="Elevate your milling and sawing game with our online machinery haven. Discover precision at your fingertips as we bring top-tier equipment right to your doorstep. Unleash the potential of every cut with ease!">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor/line-awesome.css">
+    <link rel="stylesheet" href="/assets/css/vendor/themify.css">
+    <!-- othres CSS -->
+    <link rel="stylesheet" href="/assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="/assets/css/plugins/owl-carousel.css">
+    <link rel="stylesheet" href="/assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="/assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+    <div id="buffer">
+
+        <div class="error" id="error-alert">
+            <div class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                    <path fill="#393a37"
+                        d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="error__title">Connection Timeout</div>
+            <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20"
+                    height="20">
+                    <path fill="#393a37"
+                        d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z">
+                    </path>
+                </svg></div>
+        </div>
+        <svg viewBox="25 25 50 50" class="svg-spinner">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+    <style>
+        #buffer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100%;
+            z-index: 99999;
+        }
+
+        #buffer .svg-spinner {
+            width: 20vw;
+            max-width: 100px;
+            transform-origin: center;
+            animation: rotate4 2s linear infinite;
+        }
+
+        #buffer .svg-spinner circle {
+            fill: none;
+            stroke: hsl(214, 97%, 59%);
+            stroke-width: 2;
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            stroke-linecap: round;
+            animation: dash4 1.5s ease-in-out infinite;
+        }
+
+        @keyframes rotate4 {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dash4 {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                stroke-dasharray: 90, 200;
+                stroke-dashoffset: -35px;
+            }
+
+            100% {
+                stroke-dashoffset: -125px;
+            }
+        }
+
+        .error {
+            position: absolute;
+            top: -200px;
+            left: 20vw;
+            right: 20vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: auto;
+            padding: 15px;
+            background: #EF665B;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px -3px #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease-in;
+        }
+
+        .error__icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .error__icon path {
+            fill: #fff;
+        }
+
+        .error__title {
+            font-weight: 500;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .error__close path {
+            fill: #fff;
+        }
+    </style>
+    <div class="main-wrapper">
+        <header class="header-area transparent-bar sticky-bar pt-10">
+            <div class="main-header-wrap">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-3">
+                            <div class="logo">
+                                <a href="/"><img src="/assets/images/logo/logo-1.png" style="height: 50px;"
+                                        alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6">
+                            <div
+                                class="main-menu menu-common-style menu-lh-1 menu-margin-4 menu-font-3 ml-20 menu-others-page">
+                                <nav>
+                                    <ul>
+                                        <li class="angle-shape"><a href="/">Home</a>
+
+                                        </li>
+                                        <li class="angle-shape"><a href="/gallery/">Shop </a>
+
+                                        </li>
+
+                                        </li>
+                                        <li><a href="/contact/">Contact</a></li>
+                                        <li><a href="/about-us/">About Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- main-search start -->
+
+            </div>
+            <div class="header-small-mobile">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="mobile-logo">
+                                <a href="/">
+                                    <img alt="" src="/assets/images/logo/logo-1.png" style="height: 50px;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="header-right-wrap">
+
+                                <div class="mobile-off-canvas">
+                                    <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="mobile-off-canvas-active">
+            <a class="mobile-aside-close"><i class="la la-close"></i></a>
+            <div class="header-mobile-aside-wrap">
+
+                <div class="mobile-menu-wrap">
+                    <!-- mobile menu start -->
+                    <div class="mobile-navigation">
+                        <!-- mobile menu navigation start -->
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li class="menu-item-has-children"><a href="/">Home</a>
+
+                                </li>
+                                <li class="menu-item-has-children "><a href="/gallery/">Gallery</a>
+
+                                </li>
+
+                                </li>
+                                <li><a href="/contact/">Contact</a></li>
+                                <li><a href="/about-us/">About Us</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mobile menu navigation end -->
+                    </div>
+                    <!-- mobile menu end -->
+                </div>
+
+                <div class="mobile-social-wrap">
+                    <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+                    <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+                    <a class="pinterest" href="#"><i class="ti-pinterest"></i></a>
+                    <a class="instagram" href="#"><i class="ti-instagram"></i></a>
+                    <a class="google" href="#"><i class="ti-google"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-area pt-90 pb-90" style="margin-top: 50px;">
+            <div class="container">
+                <div class="col-lg-9">
+
+                    <div class="shop-bottom-area">
+                        <div class="tab-content jump">
+                            <div id="shop-1" class="tab-pane active">
+                                <div class="row" style="width:90vw;" id="pr-lists">
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer-area section-padding-2 bg-bluegray pt-40">
+            <div class="container-fluid">
+                <div class="footer-top pb-0">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-8 col-12 col-sm-12">
+                            <div class="footer-widget mb-0">
+                                <a href="#"><img src="/assets/images/logo/logo-1.png" style="height: 50px;"
+                                        alt="logo"></a>
+                                <div class="footer-about">
+                                    <p> Upgrade seamlessly with top-tier tools delivered to your door! Unleash
+                                        potential! </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-12 col-sm-6">
+                            <div class="footer-widget mb-30">
+                                <div class="footer-title">
+                                    <h3>About us</h3>
+                                </div>
+                                <div class="footer-list">
+                                    <ul>
+                                        <li><a href="/about-us/">About</a></li>
+                                        <li><a href="/contact/">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-12 col-sm-6">
+                            <div class="footer-widget mb-30">
+                                <div class="footer-title">
+                                    <h3>Social Media</h3>
+                                </div>
+                                <div class="footer-list">
+                                    <ul>
+                                        <li><a href="https://wwww.facebook.com/">Facebbok</a></li>
+                                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-12 col-sm-6">
+                            <div class="footer-widget mb-30">
+                                <div class="footer-title">
+                                    <h3>Other Services</h3>
+                                </div>
+                                <div class="footer-list">
+                                    <ul>
+                                        <li><a href="https://tos-kaisonline.web.app">Organic Studio</a></li>
+                                        <li><a href="https://tos-kaisonline.web.app">Lifestyle Studio</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom pt-40">
+                    <div class="copyright-3 text-center pt-20 pb-20 border-top-1">
+                        <p>Copyright © <a href="https://azoraads.com/">Azora ads</a>. All Right Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Modal -->
+
+        <!-- Modal end -->
+    </div>
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="/assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <!-- Modernizer JS -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="/assets/js/plugins/countdown.js"></script>
+    <script src="/assets/js/plugins/counterup.js"></script>
+    <script src="/assets/js/plugins/images-loaded.js"></script>
+    <script src="/assets/js/plugins/isotope.js"></script>
+    <script src="/assets/js/plugins/instafeed.js"></script>
+    <script src="/assets/js/plugins/jquery-ui.js"></script>
+    <script src="/assets/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="/assets/js/plugins/magnific-popup.js"></script>
+    <script src="/assets/js/plugins/owl-carousel.js"></script>
+    <script src="/assets/js/plugins/scrollup.js"></script>
+    <script src="/assets/js/plugins/waypoints.js"></script>
+    <script src="/assets/js/plugins/slick.js"></script>
+    <script src="/assets/js/plugins/wow.js"></script>
+    <script src="/assets/js/plugins/textillate.js"></script>
+    <script src="/assets/js/plugins/elevatezoom.js"></script>
+    <script src="/assets/js/plugins/sticky-sidebar.js"></script>
+    <script src="/assets/js/plugins/smoothscroll.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/js/main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.15.5-0/firebase.js"></script>
+
+    <script src="product-lists.js"></script>
+</body>
+
+
+</html>
